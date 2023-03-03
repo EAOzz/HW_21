@@ -1,0 +1,21 @@
+{
+  "name": "hw_21",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:run": "cypress run",
+    "cy:cloud:run": "cypress run --record --key 801b712e-f6d3-4a2c-a8c1-782a739ced5c",
+    "cy:spec1": "cypress run --spec 'cypress/e2e/test1.cy.js' --record --key 801b712e-f6d3-4a2c-a8c1-782a739ced5c",
+    "cy:spec2": "cypress run --spec 'cypress/e2e/test2.cy.js' --record --key 801b712e-f6d3-4a2c-a8c1-782a739ced5c",
+    "cy:nokey:spec1": "cypress run --spec 'cypress/e2e/test1.cy.js'",
+    "cy:nokey:spec2": "cypress run --spec 'cypress/e2e/test2.cy.js'",
+    "cy:nokey:parallel": "npm run cy:nokey:spec1 -- --browser chrome & npm run cy:nokey:spec2 -- --browser electron",
+    "cy:parallel": "npm run cy:spec1 -- --browser chrome --group chrome --ci-build-id 6 --parallel & npm run cy:spec2 -- --browser electron --group electron --ci-build-id 6 --parallel"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^12.7.0"
+  }
+}
