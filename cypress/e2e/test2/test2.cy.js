@@ -1,4 +1,4 @@
-const textData = require ("../fixtures/dataSantaTest.json");
+const textData = require ("../../fixtures/dataSantaTest.json");
 
 describe('click links', () => {
   beforeEach(() => {
@@ -10,7 +10,8 @@ describe('click links', () => {
         password: Cypress.env('password'),
              }
     })
-    cy.visit('/')
+    cy.visit('/');
+    cy.viewport(Cypress.env('viewportWidth'), Cypress.env('viewportHeight'));
   })
 
   it('test links', () => {

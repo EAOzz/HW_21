@@ -1,4 +1,4 @@
-const textData = require ("../fixtures/dataSantaTest.json");
+const textData = require ("../../fixtures/dataSantaTest.json");
 
 describe('click links', () => {
   beforeEach(() => {
@@ -11,10 +11,11 @@ describe('click links', () => {
              }
     })
     cy.visit('/')
+    cy.viewport(Cypress.env('viewportWidth'), Cypress.env('viewportHeight'));
   })
 
   it('test links', () => {
-    textData.forEach((item) => {
+      textData.forEach((item) => {
       cy.testLink(item.selector, item.pathnameForTest, item.selectorForTest, item.textForTest)
     })               
   })

@@ -9,8 +9,8 @@ module.exports = defineConfig({
      username: 'katrinkaya86+test@gmail.com',
      password: '1qaz2wsx',
      watchForFileChanges: false,
-     viewportWidth: 1366,
-     viewportHeight: 768
+     viewportWidth: 1920,
+    viewportHeight: 1080
     },
     setupNodeEvents(on, config) {
        // implement node event listeners here
