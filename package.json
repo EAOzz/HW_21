@@ -11,7 +11,8 @@
     "cy:nokey:spec1:config1:chrome": "cypress run --spec 'cypress/e2e/test1/**.*' --browser chrome --config-file cypress.config.js",
     "cy:nokey:spec2:config2:electron": "cypress run --spec 'cypress/e2e/test2/**.*' --browser electron --config-file cypress_2.config.js",
     "cy:nokey:parallel": "npm run cy:nokey:spec1:config1:chrome -- & npm run cy:nokey:spec2:config2:electron --",
-    "cy:parallel": "npm run cy:spec1:config1:chrome --group chrome --ci-build-id 10 --parallel & npm run cy:spec2:config2:electron -- --browser electron --group electron --ci-build-id 10 --parallel"
+    "cy:parallel": "npm run cy:spec1:config1:chrome -- --group chrome --ci-build-id 12 --parallel & npm run cy:spec2:config2:electron --  --group electron --ci-build-id 12 --parallel",
+    "cy:parallel:ID": "npm run cy:spec1:config1:chrome -- --group chrome --ci-build-id %BUILD_NUMBER% --parallel & npm run cy:spec2:config2:electron -- --group electron --ci-build-id %BUILD_NUMBER% --parallel"
   },
   "author": "",
   "license": "ISC",
